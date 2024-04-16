@@ -1,0 +1,12 @@
+name: Echo Secret
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  echo_secret:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Echo
+        run: 'echo "SSH Private Key: ${{ secrets.VPS_HOST }}"'
